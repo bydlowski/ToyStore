@@ -1,0 +1,20 @@
+<h4 class="column">Featured Dedoches</h4>
+<div class="column">
+  <ul class="movies-grid no-bullet row">
+    <% @toys.each do |toy| %>
+      <li class="large-3 medium-4 small-12 column">
+        <div class="movie-card padly">
+          <%= link_to toy, class: "poster" do %>
+            <%= image_tag toy.image %>
+          <% end %>
+          <div class="movie-info ell glassy-bg padmy padlx">
+            <div class="title">
+              <h6><%= toy.name %> <span>(<%= toy.stock %>)</span></h6>
+            </div>
+            <p class="left price label movie-label radius">$ <%= toy.price %></p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
