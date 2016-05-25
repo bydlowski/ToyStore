@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 
   def get_cart_toys
     cart_ids = $redis.smembers "cart#{id}"
-    toy.find(cart_ids)
+    Toy.find(cart_ids)
   end
 
   # Purchasing methods

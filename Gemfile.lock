@@ -44,6 +44,8 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    braintree (2.62.0)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (9.0.4)
     coffee-rails (4.1.1)
@@ -69,6 +71,11 @@ GEM
       sprockets-es6 (>= 0.9.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gon (6.0.1)
+      actionpack (>= 3.0)
+      json
+      multi_json
+      request_store (>= 1.0)
     hiredis (0.6.1)
     i18n (0.7.0)
     jbuilder (2.4.1)
@@ -124,6 +131,7 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     redis (3.3.0)
+    request_store (1.3.1)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
@@ -169,10 +177,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  braintree
   byebug
   coffee-rails (~> 4.1.0)
   devise
   foundation-rails
+  gon
   hiredis
   jbuilder (~> 2.0)
   jquery-rails

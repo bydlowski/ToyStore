@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'transactions/new'
+
   get 'carts/show'
 
   resources :toys, only: [:show, :index]
+  resources :transactions, only: [:new, :create]
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   resource :cart, only: [:show] do
     put 'add/:toy_id', to: 'carts#add', as: :add_to
